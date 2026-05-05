@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+@mixin text-heading {
+  font-family: var(--font-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.1;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 40px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-size: 56px;
+  }
+}
+
+@mixin text-body {
+  font-family: var(--font-main);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 16px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-size: 18px;
+  }
+}

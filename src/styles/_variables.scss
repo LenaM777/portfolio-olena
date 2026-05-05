@@ -1,0 +1,20 @@
+:root {
+  --font-main: "Inter", sans-serif;
+  --font-code: "Fira Code", monospace;
+
+  --bg-color: #eff5eb;
+  --text-color: #0e0c0c;
+  --icon-color: #555555;
+
+  --transition: 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0a0b0f;
+  --text-color: #e9edf1;
+  --icon-color: #ffcc00;
+}
+
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
