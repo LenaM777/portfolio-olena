@@ -1,12 +1,16 @@
 import { useTheme } from "../../context/ThemeContext";
+import Icon from "../Icons/Icons";
 
 const ThemeToggler = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <button type="button" onClick={toggleTheme}>
-      {theme === "light" ? "Dark" : "Light"}
-      Theme
+    <button
+      type="button"
+      onClick={toggleTheme}
+      aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}
+    >
+      <Icon name={theme === "light" ? "moon-o" : "sun"} />
     </button>
   );
 };
