@@ -1,0 +1,41 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  @include flex($justify: flex-end);
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-overlay-color);
+  }
+
+  &__content {
+    position: relative;
+    width: 280px;
+    height: 100%;
+    background: var(--bg-color);
+    padding: 20px;
+    @include flex($direction: column, $align: flex-start, $justify: flex-start);
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  &__nav {
+    @include flex($direction: column, $align: flex-start);
+    padding-top: 40px;
+  }
+}

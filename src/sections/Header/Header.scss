@@ -1,3 +1,4 @@
+@use "../../styles/variables" as *;
 @use "../../styles/mixins" as *;
 
 .header {
@@ -7,7 +8,30 @@
     @include flex($justify: space-between);
   }
 
+  &__nav {
+    display: none;
+
+    @media (min-width: $bp-tablet) {
+      display: block;
+    }
+  }
+
   &__nav-list {
+    @include flex($direction: column, $align: flex-start, $gap: 24px);
+
+    @media (min-width: $bp-tablet) {
+      @include flex($direction: row, $gap: 24px);
+    }
+  }
+  &__actions {
     @include flex($gap: 24px);
+  }
+
+  &__burger {
+    display: block;
+
+    @media (min-width: $bp-tablet) {
+      display: none;
+    }
   }
 }

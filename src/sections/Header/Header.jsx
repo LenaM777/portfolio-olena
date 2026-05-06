@@ -1,9 +1,14 @@
+import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import NavLinks from "../../components/NavLinks/NavLinks";
+import MobileMenu from "../../components/MobileMenu/MobileMenu";
 import ThemeToggler from "../../components/ThemeToggler/ThemeToggler";
+import Icon from "../../components/Icons/Icons";
 import "./Header.scss";
 
 export default function Header() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="header" id="top">
       <div className="container">
@@ -18,9 +23,20 @@ export default function Header() {
             <NavLinks className="nav-link" />
           </nav>
 
-          <ThemeToggler />
+          <div className="header__actions">
+            <ThemeToggler />
+
+            <button
+              className="header__burger"
+              onClick={() => setIsOpen(true)}
+              aria-label="Open menu"
+            >
+              <Icon name="menu" />
+            </button>
+          </div>
         </div>
       </div>
+      <MobileMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </header>
   );
 }
