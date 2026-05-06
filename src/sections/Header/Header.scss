@@ -1,0 +1,13 @@
+@use "../../styles/mixins" as *;
+
+.header {
+  width: 100%;
+
+  &__container {
+    @include flex($justify: space-between);
+  }
+
+  &__nav-list {
+    @include flex($gap: 24px);
+  }
+}

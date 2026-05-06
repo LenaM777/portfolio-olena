@@ -1,11 +1,11 @@
 import React from "react";
-import ThemeToggler from "./components/ThemeToggler/ThemeToggler";
+import Header from "./sections/Header/Header";
 
 const App = () => {
   return (
     <>
       <div>App</div>
-      <ThemeToggler />
+      <Header />
     </>
   );
 };
