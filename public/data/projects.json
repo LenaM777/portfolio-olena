@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Garry Potter",
+    "description": "Description",
+    "stack": ["HTML", "CSS", "JS"],
+    "demo": "https://github.com",
+    "link": "https://github.com"
+  },
+  {
+    "id": 2,
+    "title": "Weather App",
+    "description": "Description",
+    "stack": ["HTML", "CSS", "JS"],
+    "demo": "#",
+    "link": "#"
+  },
+  {
+    "id": 3,
+    "title": "To-Do List App",
+    "description": "Description",
+    "stack": ["HTML", "CSS", "JS"],
+    "demo": "#",
+    "link": "#"
+  },
+  {
+    "id": 4,
+    "title": "Tomato",
+    "description": "Description",
+    "stack": ["HTML", "CSS", "JS"],
+    "demo": "#",
+    "link": "#"
+  },
+  {
+    "id": 5,
+    "title": "Loopstudios",
+    "description": "Description",
+    "stack": ["HTML", "CSS", "JS"],
+    "demo": "#",
+    "link": "#"
+  },
+  {
+    "id": 6,
+    "title": "Space Tourism",
+    "description": "Description",
+    "stack": ["HTML", "CSS", "JS"],
+    "demo": "#",
+    "link": "#"
+  }
+]
