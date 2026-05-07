@@ -1,4 +1,5 @@
 import { HashLink } from "react-router-hash-link";
+import ProjectDropdown from "../ProjectDropdown/ProjectDropdown";
 
 const NAV_LINKS = [
   { id: "about", label: "About", path: "#about" },
@@ -21,6 +22,7 @@ export default function NavLinks({ className, onClick }) {
           >
             {link.label}
           </HashLink>
+          {link.id === "projects" && <ProjectDropdown onLinkClick={onClick} />}
         </li>
       ))}
     </ul>
