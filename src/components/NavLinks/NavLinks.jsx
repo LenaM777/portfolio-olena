@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import ProjectDropdown from "../ProjectDropdown/ProjectDropdown";
+import Icon from "../Icons/Icons";
 
 const NAV_LINKS = [
   { id: "about", label: "About", path: "#about" },
@@ -10,19 +12,47 @@ const NAV_LINKS = [
 ];
 
 export default function NavLinks({ className, onClick }) {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsDropdownOpen(false);
+    if (onClick) onClick();
+  };
+
   return (
     <ul className="header__nav-list" role="list">
       {NAV_LINKS.map((link) => (
-        <li key={link.id} role="listitem">
-          <HashLink
-            smooth
-            to={link.path}
-            className={className}
-            onClick={onClick}
-          >
-            {link.label}
-          </HashLink>
-          {link.id === "projects" && <ProjectDropdown onLinkClick={onClick} />}
+        <li key={link.id} role="listitem" className="nav-item-wrapper">
+          <div className="nav-item-row">
+            <HashLink
+              smooth
+              to={link.path}
+              className={className}
+              onClick={handleLinkClick}
+            >
+              {link.label}
+            </HashLink>
+
+            {link.id === "projects" && (
+              <button
+                type="button"
+                className="dropdown__arrow-btn"
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                aria-expanded={isDropdownOpen}
+                aria-haspopup="true"
+                aria-label="Toggle projects menu"
+              >
+                <Icon name="play3" />
+              </button>
+            )}
+          </div>
+          {link.id === "projects" && (
+            <ProjectDropdown
+              isOpen={isDropdownOpen}
+              onClose={() => setIsDropdownOpen(false)}
+              onLinkClick={onClick}
+            />
+          )}
         </li>
       ))}
     </ul>
