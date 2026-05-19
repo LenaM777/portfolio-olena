@@ -1,0 +1,21 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+
+.about-section {
+    padding-top: 40px;
+
+    @media (min-width: $bp-tablet) {
+        padding-top: 60px;
+    }
+
+    &__title {
+        @include text-heading;
+        margin-bottom: 20px;
+    }
+
+    &__content {
+        @include text-body;
+    }
+}
+
