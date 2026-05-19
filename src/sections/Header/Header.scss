@@ -3,9 +3,21 @@
 
 .header {
   width: 100%;
+  padding: 20px 0;
+  border-bottom: 2px solid var(--color-glass-base);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 
   &__container {
     @include flex($justify: space-between);
+  }
+
+  &__logo {
+    font-family: var(--font-code);
+    font-size: 22px;
+    letter-spacing: 4px;
   }
 
   &__nav {
@@ -20,7 +32,7 @@
     @include flex($direction: column, $align: flex-start, $gap: 24px);
 
     @media (min-width: $bp-tablet) {
-      @include flex($direction: row, $gap: 24px);
+      @include flex($direction: row, $gap: 40px);
     }
   }
   &__actions {

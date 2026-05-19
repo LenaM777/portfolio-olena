@@ -6,6 +6,8 @@
   --text-color: #0e0c0c;
   --icon-color: #555555;
   --bg-overlay-color: rgba(0, 0, 0, 0.5);
+  --color-glass-base: rgba(91, 92, 95, 0.212);
+  --color-link-hover: rgb(226, 73, 112);
 
   --transition: 0.3s ease;
 }
@@ -14,6 +16,7 @@
   --bg-color: #0a0b0f;
   --text-color: #e9edf1;
   --icon-color: #ffcc00;
+  
 }
 
 $bp-mobile: 480px;

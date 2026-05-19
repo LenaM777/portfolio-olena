@@ -4,7 +4,6 @@ import Header from "./sections/Header/Header";
 const App = () => {
   return (
     <>
-      <div>App</div>
       <Header />
     </>
   );

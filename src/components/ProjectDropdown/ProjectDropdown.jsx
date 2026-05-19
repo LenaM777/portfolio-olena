@@ -1,4 +1,5 @@
 import { useProjects } from "../../hooks/useProjects";
+import "./ProjectDropdown.scss";
 
 export default function ProjectDropdown({ isOpen, onClose, onLinkClick }) {
   const projects = useProjects();

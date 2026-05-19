@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import ProjectDropdown from "../ProjectDropdown/ProjectDropdown";
 import Icon from "../Icons/Icons";
+import "./NavLinks.scss";
 
 const NAV_LINKS = [
   { id: "about", label: "About", path: "#about" },
@@ -20,10 +21,10 @@ export default function NavLinks({ className, onClick }) {
   };
 
   return (
-    <ul className="header__nav-list" role="list">
+    <ul className="header__nav-list nav-menu" role="list">
       {NAV_LINKS.map((link) => (
-        <li key={link.id} role="listitem" className="nav-item-wrapper">
-          <div className="nav-item-row">
+        <li key={link.id} role="listitem" className="nav-menu__item">
+          <div className="nav-menu__row">
             <HashLink
               smooth
               to={link.path}
@@ -36,7 +37,9 @@ export default function NavLinks({ className, onClick }) {
             {link.id === "projects" && (
               <button
                 type="button"
-                className="dropdown__arrow-btn"
+                className={`nav-menu__toggle ${
+                  isDropdownOpen ? "is-open" : ""
+                }`}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 aria-expanded={isDropdownOpen}
                 aria-haspopup="true"
