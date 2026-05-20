@@ -1,49 +1,55 @@
 [
   {
     "id": 1,
+    "image": "./images/garry.png",
     "title": "Garry Potter",
     "description": "Description",
-    "stack": ["HTML", "CSS", "JS"],
+    "stack": ["HTML", "SCSS", "JS", "Bootstrap"],
     "demo": "https://github.com",
     "link": "https://github.com"
   },
   {
     "id": 2,
+    "image": "./images/weather.png",  
     "title": "Weather App",
     "description": "Description",
-    "stack": ["HTML", "CSS", "JS"],
+    "stack": ["HTML", "SCSS", "JS"],
     "demo": "#",
     "link": "#"
   },
   {
     "id": 3,
+    "image": "./images/todo-list.png",
     "title": "To-Do List App",
     "description": "Description",
-    "stack": ["HTML", "CSS", "JS"],
+    "stack": ["HTML", "SCSS", "JS"],
     "demo": "#",
     "link": "#"
   },
   {
     "id": 4,
+    "image": "./images/tomato.png",
     "title": "Tomato",
     "description": "Description",
-    "stack": ["HTML", "CSS", "JS"],
+    "stack": ["HTML", "SCSS", "JS"],
     "demo": "#",
     "link": "#"
   },
   {
     "id": 5,
+    "image": "./images/loopstudios.png",
     "title": "Loopstudios",
     "description": "Description",
-    "stack": ["HTML", "CSS", "JS"],
+    "stack": ["HTML", "SCSS", "JS"],
     "demo": "#",
     "link": "#"
   },
   {
     "id": 6,
+    "image": "./images/space-tourism.png",
     "title": "Space Tourism",
     "description": "Description",
-    "stack": ["HTML", "CSS", "JS"],
+    "stack": ["HTML", "SCSS", "JS"],
     "demo": "#",
     "link": "#"
   }
