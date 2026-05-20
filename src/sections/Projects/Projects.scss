@@ -1,0 +1,11 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+
+.projects-section {
+    padding: 20px 0;
+
+    @media (min-width: $bp-tablet) {
+        padding: 40px 0;
+    }   
+}
