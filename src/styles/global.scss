@@ -3,6 +3,8 @@
 @use "./mixins" as *;
 @use "./typography" as *;
 
+@use "./components/section" as *;
+
 *,
 *::before,
 *::after {

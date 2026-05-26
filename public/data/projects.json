@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "image": "./images/garry.png",
+    "image": "./images/garry.jpg",
     "title": "Garry Potter",
     "description": "Description",
     "stack": ["HTML", "SCSS", "JS", "Bootstrap"],
@@ -28,7 +28,7 @@
   },
   {
     "id": 4,
-    "image": "./images/tomato.png",
+    "image": "./images/tomato.jpg",
     "title": "Tomato",
     "description": "Description",
     "stack": ["HTML", "SCSS", "JS"],
@@ -37,7 +37,7 @@
   },
   {
     "id": 5,
-    "image": "./images/loopstudios.png",
+    "image": "./images/loopstudios.jpg",
     "title": "Loopstudios",
     "description": "Description",
     "stack": ["HTML", "SCSS", "JS"],
@@ -46,7 +46,7 @@
   },
   {
     "id": 6,
-    "image": "./images/space-tourism.png",
+    "image": "./images/space-tourism.jpg",
     "title": "Space Tourism",
     "description": "Description",
     "stack": ["HTML", "SCSS", "JS"],
