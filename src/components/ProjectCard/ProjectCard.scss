@@ -1,0 +1,105 @@
+@use "../../styles/variables" as *;
+
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
+
+.project-card {
+  @include flex($direction: column, $align: flex-start, $justify: flex-start, $gap: 24px);
+  max-width: 400px;
+  height: 100%;
+  padding: 24px;
+  background: transparent;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: var(--card-shadow-hover);
+    .project-card__title {
+      letter-spacing: 4px;
+    }
+
+    .project-card__image img {
+      transform: scale(1.1);
+    }
+
+    .project-card__image {
+      box-shadow: var(--glow-color);
+    }
+  }
+
+  &__image {
+    position: relative;
+    z-index: -1;
+    width: 100%;
+    height: 250px;
+    aspect-ratio: 16 / 9;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+
+  &__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.3s ease-in-out;
+
+    @media (min-width: $bp-tablet) {
+      max-height: 300px;
+    }
+
+    @media (min-width: $bp-desktop) {
+      max-height: 280px;
+    }
+  }
+
+  &__content {
+    @include flex($direction: column, $align: flex-start, $justify: flex-start, $gap: 16px);
+    flex-grow: 1;
+  }
+
+  &__description {
+    flex-grow: 1;
+    margin-bottom: 16px;
+    color: var(--text-color);
+  }
+
+  &__stack {
+    @include flex($justify: flex-start, $gap: 12px);
+    padding-bottom: 12px;
+  }
+
+  &__stack-item {
+    padding: 4px 12px;
+    font-size: 12px;
+    color: var(--tool-color);
+    background-color: var(--tool-bg);
+    border-radius: 14px;
+    box-shadow: var(--tool-shadow);
+  }
+
+  &__links {
+    @include flex($justify: flex-start, $gap: 32px);
+
+    margin-top: auto;
+  }
+
+  &__btn-link {
+    padding: 12px 28px;
+    font-size: 16px;
+    color: var(--btn-text-color);
+    background-color: transparent;
+    border-radius: 6px;
+    box-shadow: var(--glow-button-color);
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--btn-text-hover);
+      background: var(--btn-neon-gradient);
+      box-shadow: var(--btn-shadow-color);
+    }
+  }
+}
