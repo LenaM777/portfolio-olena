@@ -5,13 +5,14 @@
   --bg-color: #eff5eb;
   --text-color: #0e0c0c;
 
-  --bg-overlay-color: rgba(0, 0, 0, 0.5);
+  --bg-overlay-color: rgba(85, 84, 84, 0.829);
   --color-glass-base: rgba(91, 92, 95, 0.212);
   --color-link-hover: rgb(236, 34, 85);
 
   --tool-color: #043b37;
   --tool-bg: #0fe1f031;
   --tool-shadow: none;
+  
 
   --btn-neon-gradient: linear-gradient(145deg, #bf6bcf, #a8aeeb);
   --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.575);
@@ -48,6 +49,7 @@
   --btn-bg-color: transparent;
   --btn-text-color: #b22eff;
   --btn-text-hover: #ffffff;
+  //box-shadow: 0 10px 40px rgb(17 206 229 / 30%);
 }
 
 $bp-mobile: 480px;

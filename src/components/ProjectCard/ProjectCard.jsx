@@ -1,10 +1,19 @@
 import "./ProjectCard.scss";
 
-const ProjectCard = ({ data }) => {
+const ProjectCard = ({ data, onCardClick, isInsideModal = false }) => {
   const { title, description, image, stack, demo, link } = data;
 
   return (
-    <article className="project-card">
+    <article
+      className="project-card"
+      onClick={!isInsideModal ? onCardClick : undefined}
+      role={!isInsideModal ? "button" : undefined}
+      tabIndex={!isInsideModal ? 0 : undefined}
+      onKeyDown={(e) => !isInsideModal && e.key === "Enter" && onCardClick()}
+      aria-label={
+        !isInsideModal ? `View details of ${title} project` : undefined
+      }
+    >
       <div className="project-card__image">
         <img src={image} alt={`Screenshot of ${title} project`} />
       </div>

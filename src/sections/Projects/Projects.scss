@@ -11,4 +11,15 @@
     justify-content: center;
     align-items: stretch;
   }
+
+  &__card-button {
+    all: unset;
+    cursor: pointer;
+    display: contents;
+
+    &:focus-visible {
+      outline: 2px solid var(--btn-text-color);
+      outline-offset: 4px;
+    }
+  }
 }

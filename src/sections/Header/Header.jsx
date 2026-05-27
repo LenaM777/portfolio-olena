@@ -31,6 +31,7 @@ export default function Header() {
               className="header__burger"
               onClick={() => setIsOpen(true)}
               aria-label="Open menu"
+              type="button"
             >
               <Icon name="menu" />
             </button>

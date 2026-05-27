@@ -1,0 +1,80 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/utils" as *;
+
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-overlay-color);
+  @include flex;
+  padding: 20px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+
+  &__content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    border-radius: 12px;
+    background: none;
+    animation: slideUp 0.3s ease-in-out;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 44px;
+    height: 44px;
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    @include flex;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: var(--tool-bg);
+      transform: scale(1.2);
+      color: var(--btn-text-hover);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--btn-text-color);
+      outline-offset: 2px;
+    }
+  }
+
+  &__card-wrapper {
+    position: relative;
+    top: 60px;
+    padding: 12px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
