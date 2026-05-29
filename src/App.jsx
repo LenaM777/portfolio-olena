@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./sections/Header/Header";
 import About from "./sections/About/About";
 import Projects from "./sections/Projects/Projects";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
         <About />
         <Projects />
       </main>
+      <ScrollToTop />
     </>
   );
 };

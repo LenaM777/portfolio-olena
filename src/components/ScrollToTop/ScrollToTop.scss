@@ -1,0 +1,38 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  z-index: 99;
+  @include flex;
+  background-color: var(--bg-color);
+  box-shadow: 0 0px 8px var(--tool-color);
+  border-radius: 50%;
+  border: none;
+  outline: none;
+
+  @media (min-width: $bp-tablet) {
+    bottom: 24px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+  }
+  &__arrow {
+    width: 32px;
+    height: 32px;
+    color: var(--tool-color);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--tool-color);
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 14px var(--tool-color);
+  }
+}

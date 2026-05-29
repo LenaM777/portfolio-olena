@@ -56,5 +56,8 @@
 <path d="M2 12h6v18h-6v-18z"></path>
 <path d="M8 7c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
 </symbol>
+<symbol id="icon-arrow-up" viewBox="0 0 32 32">
+<path d="M16 1l-15 15h9v16h12v-16h9z" fill="currentColor"></path>
+</symbol>
 </defs>
 </svg>

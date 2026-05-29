@@ -9,7 +9,9 @@
   top: 0;
   left: 0;
   z-index: 1000;
-
+  background: var(--color-glass-white);
+  backdrop-filter: blur(40px);
+  
   &__container {
     @include flex($justify: space-between);
   }
