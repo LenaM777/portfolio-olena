@@ -1,0 +1,111 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.rock-trigger {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 99;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--bg-color);
+  box-shadow: 0 0 5px var(--tool-color);
+  @include flex;
+
+  @media (min-width: $bp-tablet) {
+    bottom: 32px;
+    left: 32px;
+    width: 56px;
+    height: 56px;
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    color: var(--tool-color);
+  }
+
+  &:hover {
+    box-shadow: 0 0 14px var(--btn-text-color);
+    color: var(--btn-text-color);
+    transition: color 0.3s, box-shadow 0.3s;
+    scale: 1.1;
+  }
+}
+
+.rock-player {
+  position: fixed;
+  bottom: 32px;
+  left: 20px;
+  right: 70px;
+  z-index: 10000;
+  background: var(--bg-player-color);
+  box-shadow: 0 0px 6px var(--btn-text-color);
+  border-radius: 16px;
+  padding: 8px;
+  text-align: center;
+  color: var(--text-color);
+
+  @media (min-width: $bp-tablet) {
+    bottom: 20px;
+    left: 20px;
+    width: 380px;
+  }
+
+  &__next {
+    transform: rotate(180deg);
+  }
+
+  &__close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 44px;
+    height: 44px;
+
+    &--icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--accent-color);
+    letter-spacing: 2px;
+    padding-bottom: 8px;
+  }
+
+  &__track-name {
+    font-size: 16px;
+    font-weight: 500;
+    overflow: hidden;
+    @include flex($direction: column, $gap: 8px);
+    text-align: center;
+    padding-bottom: 10px;
+
+    @media (min-width: $bp-tablet) {
+      @include flex($direction: row, $gap: 10px);
+    }
+  }
+
+  &__artist {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__controls {
+    @include flex($gap: 8px);
+  }
+
+  &__btn {
+    width: 44px;
+    height: 44px;
+    
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
