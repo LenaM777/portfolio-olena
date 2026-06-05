@@ -1,5 +1,6 @@
 :root {
-  --font-main: "Inter", sans-serif;
+  --font-mona: 'Mona Sans', sans-serif;
+  --font-inter: "Inter", sans-serif;
   --font-code: "Fira Code", monospace;
 
   --bg-color: #eff5eb;
@@ -33,7 +34,8 @@
 [data-theme="dark"] {
   --bg-color: #090920;
 
-  --text-color: #e9edf1;
+  --text-color: #F0F6FC;
+  //#e9edf1;
   --bg-player-color: #111f35;
 
   --bg: #0a0b0f;

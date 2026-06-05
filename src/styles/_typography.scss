@@ -1,27 +1,29 @@
 @use "variables" as *;
 
 @mixin text-heading {
-  font-family: var(--font-main);
+  font-family: var(--font-mona);
   font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 1.1;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  font-variation-settings: "wdth" 125, "opsz" 72;
 
   @media (min-width: $bp-tablet) {
-    font-size: 40px;
+    font-size: 32px;
   }
 
   @media (min-width: $bp-desktop) {
-    font-size: 48px;
+    font-size: 36px;
   }
 }
 
 @mixin text-body {
-  font-family: var(--font-main);
+  font-family: var(--font-mona);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-variation-settings: "wdth" 100, "opsz" 16;
 
   @media (min-width: $bp-tablet) {
     font-size: 16px;
