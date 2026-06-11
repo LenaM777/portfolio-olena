@@ -3,7 +3,7 @@
 
 .scroll-to-top {
   position: fixed;
-  bottom: 16px;
+  bottom: 40px;
   right: 16px;
   width: 48px;
   height: 48px;
@@ -14,13 +14,19 @@
   border-radius: 50%;
   border: none;
   outline: none;
+  transition: bottom 0.5s ease;
 
   @media (min-width: $bp-tablet) {
-    bottom: 24px;
+    bottom: 40px;
     right: 24px;
     width: 56px;
     height: 56px;
   }
+
+  &__docked {
+    bottom: 160px; 
+  }
+
   &__arrow {
     width: 32px;
     height: 32px;

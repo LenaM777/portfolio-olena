@@ -31,6 +31,7 @@ const BackstagePass = () => {
   const [isActive, setIsActive] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  const [isDocked, setIsDocked] = useState(false);
 
   const audioRef = useRef(null);
 
@@ -45,6 +46,27 @@ const BackstagePass = () => {
       audioRef.current.pause();
     }
   }, [isPlaying, currentTrackIndex, isActive]);
+
+  useEffect(() => {
+    const footerElement = document.querySelector(".footer");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsDocked(entry.isIntersecting);
+      },
+      { rootMargin: "40px" }
+    );
+
+    if (footerElement) {
+      observer.observe(footerElement);
+    }
+
+    return () => {
+      if (footerElement) {
+        observer.disconnect();
+      }
+    };
+  }, []);
 
   const closeBackstagePass = () => {
     setIsActive(false);
@@ -66,7 +88,7 @@ const BackstagePass = () => {
       <AnimatePresence>
         {!isActive && (
           <motion.button
-            className="rock-trigger"
+            className={`rock-trigger ${isDocked ? "rock-trigger__docked" : ""}`}
             onClick={() => setIsActive(true)}
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -84,7 +106,7 @@ const BackstagePass = () => {
         {isActive && (
           <>
             <motion.div
-              className="rock-player"
+              className={`rock-player ${isDocked ? "rock-player__docked" : ""}`}
               initial={{ x: -300, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -300, opacity: 0 }}

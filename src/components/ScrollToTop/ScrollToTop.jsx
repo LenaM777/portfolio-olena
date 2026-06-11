@@ -5,9 +5,10 @@ import "./ScrollToTop.scss";
 
 export default function ScrollToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isDocked, setIsDocked] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
+    if (window.scrollY > 300) {
       setIsVisible(true);
     } else {
       setIsVisible(false);
@@ -23,8 +24,25 @@ export default function ScrollToTop() {
 
   useEffect(() => {
     window.addEventListener("scroll", toggleVisibility);
+
+    const footerElement = document.querySelector(".footer");
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsDocked(entry.isIntersecting);
+      },
+      { rootMargin: "40px" }
+    );
+
+    if (footerElement) {
+      observer.observe(footerElement);
+    }
+
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
+      if (footerElement) {
+        observer.unobserve(footerElement);
+      }
     };
   }, []);
 
@@ -33,7 +51,7 @@ export default function ScrollToTop() {
       {isVisible && (
         <motion.button
           onClick={scrollToTop}
-          className="scroll-to-top"
+          className={`scroll-to-top ${isDocked ? "scroll-to-top__docked" : ""}`}
           aria-label="Scroll to top"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
