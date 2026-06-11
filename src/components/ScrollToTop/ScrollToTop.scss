@@ -31,7 +31,15 @@
     outline: 3px solid var(--tool-color);
     outline-offset: 2px;
   }
+  &:active {
+    box-shadow: 0 4px 14px var(--tool-color);
+  }
 
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      box-shadow: 0 4px 14px var(--tool-color);
+    }
+  }
   &:hover {
     box-shadow: 0 4px 14px var(--tool-color);
   }
