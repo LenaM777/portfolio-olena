@@ -17,10 +17,61 @@
   }
 }
 
+@mixin text-heading-md {
+  font-family: var(--font-mona);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  font-variation-settings: "wdth" 125, "opsz" 72;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 22px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-size: 24px;
+  }
+}
+
+@mixin text-heading-xl {
+  font-family: var(--font-mona);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  font-variation-settings: "wdth" 125, "opsz" 72;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 40px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-size: 44px;
+  }
+}
+
+@mixin text-heading-sm {
+  font-family: var(--font-mona);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  font-variation-settings: "wdth" 125, "opsz" 72;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-size: 20px;
+  }
+}
+
 @mixin text-body {
   font-family: var(--font-mona);
   font-style: normal;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.6;
   font-variation-settings: "wdth" 100, "opsz" 16;
@@ -30,6 +81,6 @@
   }
 
   @media (min-width: $bp-desktop) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }

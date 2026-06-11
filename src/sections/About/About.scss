@@ -10,12 +10,13 @@
     }
 
     &__title {
-        @include text-heading;
+        @include text-heading-xl;
         margin-bottom: 20px;
     }
 
     &__content {
         @include text-body;
+        font-size: 18px;
     }
 }
 

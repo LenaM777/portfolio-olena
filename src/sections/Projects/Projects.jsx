@@ -33,7 +33,10 @@ const Projects = () => {
         aria-labelledby="projects-title"
       >
         <div className="container">
-          <h2 className="section__title" id="projects-title">
+          <h2
+            className="projects-section__title section__title"
+            id="projects-title"
+          >
             Projects
           </h2>
           <div className="projects-section__grid" role="list">

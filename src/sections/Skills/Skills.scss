@@ -1,0 +1,11 @@
+.skills-section {
+  &__list {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  &__item {
+    list-style: inherit;
+    margin-bottom: 12px;
+  }
+}

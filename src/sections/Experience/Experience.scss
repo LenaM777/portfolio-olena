@@ -1,14 +1,26 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/typography" as *;
 
 
 .experience-section {
+  &__title {
+    @include text-heading-md;
+
+    margin-bottom: 16px;
+  }
+
+  &__description {
+    @include text-heading-sm;
+    margin-bottom: 12px;
+  }
 
   &__bullet {
     position: relative;
     display: flex;
     align-items: flex-start;
     gap: 12px; 
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     color: var(--text-color);
     transition: color 0.3s ease;
 
