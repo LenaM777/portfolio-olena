@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 import BackstagePass from "./components/BackstagePass/BackstagePass";
 import Experience from "./sections/Experience/Experience";
 import Skills from "./sections/Skills/Skills";
+import Footer from "./sections/Footer/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Skills />
         <Projects />
       </main>
+      <Footer />
       <BackstagePass />
       <ScrollToTop />
     </>

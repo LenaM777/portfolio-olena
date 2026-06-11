@@ -1,0 +1,52 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+@use "../../styles/utils" as *;
+
+
+.footer {
+  width: 100%;
+  padding: 40px 20px;
+  background-color: var(--bg-color);
+  border-top: 1px solid var(--tool-bg);
+
+  &__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    @include flex($direction: column, $align: center, $justify: space-between, $gap: 20px);
+
+    @media (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 0;
+    }
+  }
+
+  &__copy {
+    font-size: 14px;
+    color: var(--text-color);
+    opacity: 0.7;
+  }
+
+  &__links {
+    @include flex($justify: center, $gap: 24px);
+  }
+
+  &__link {
+    font-size: 14px;
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: color 0.3s ease, opacity 0.3s ease;
+
+    &:active {
+      color: var(--tool-color);
+      opacity: 1;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--tool-color);
+        opacity: 1;
+      }
+    }
+  }
+}
