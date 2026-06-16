@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { HashLink } from "react-router-hash-link";
 import ProjectDropdown from "../ProjectDropdown/ProjectDropdown";
 import Icon from "../Icons/Icons";
+import { useClickOutside } from "../../hooks/useClickOutside";
 import "./NavLinks.scss";
 
 const NAV_LINKS = [
@@ -15,15 +16,30 @@ const NAV_LINKS = [
 export default function NavLinks({ className, onClick }) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  const projectsRef = useRef(null);
+
   const handleLinkClick = () => {
     setIsDropdownOpen(false);
     if (onClick) onClick();
   };
 
+  useClickOutside(
+    projectsRef,
+    () => {
+      setIsDropdownOpen(false);
+    },
+    isDropdownOpen
+  );
+
   return (
     <ul className="header__nav-list nav-menu" role="list">
       {NAV_LINKS.map((link) => (
-        <li key={link.id} role="listitem" className="nav-menu__item">
+        <li
+          key={link.id}
+          role="listitem"
+          className="nav-menu__item"
+          ref={link.id === "projects" ? projectsRef : null}
+        >
           <div className="nav-menu__row">
             <HashLink
               smooth

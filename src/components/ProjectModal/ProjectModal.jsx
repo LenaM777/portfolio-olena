@@ -1,11 +1,14 @@
 import { useEffect, useRef } from "react";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import Icon from "../../components/Icons/Icons";
+import { useClickOutside } from "../../hooks/useClickOutside";
 import "./ProjectModal.scss";
 
 const ProjectModal = ({ isOpen, project, onClose }) => {
   const modalRef = useRef(null);
   const previousActiveElement = useRef(null);
+
+  useClickOutside(modalRef, onClose, isOpen);
 
   useEffect(() => {
     if (!isOpen || !project) return;
@@ -37,16 +40,9 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
 
   if (!isOpen || !project) return null;
 
-  const handleBackdropClick = (e) => {
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
-
   return (
     <div
       className="project-modal"
-      onClick={handleBackdropClick}
       role="dialog"
       aria-modal="true"
       aria-labelledby={`modal-title-${project.id}`}
