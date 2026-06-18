@@ -6,6 +6,7 @@ const ThemeToggler = () => {
 
   return (
     <button
+      className="btn-touch-target"
       type="button"
       onClick={toggleTheme}
       aria-label={`Switch to ${theme === "light" ? "dark" : "light"} theme`}

@@ -28,7 +28,7 @@ export default function Header() {
             <ThemeToggler />
 
             <button
-              className="header__burger"
+              className="header__burger btn-touch-target"
               onClick={() => setIsOpen(true)}
               aria-label="Open menu"
               type="button"

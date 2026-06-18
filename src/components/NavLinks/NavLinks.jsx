@@ -53,7 +53,7 @@ export default function NavLinks({ className, onClick }) {
             {link.id === "projects" && (
               <button
                 type="button"
-                className={`nav-menu__toggle ${
+                className={`nav-menu__toggle btn-touch-target ${
                   isDropdownOpen ? "is-open" : ""
                 }`}
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
