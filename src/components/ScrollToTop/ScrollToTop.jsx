@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Icon from "../../components/Icons/Icons";
+import Icon from "@/components/Icons/Icons";
 import "./ScrollToTop.scss";
 
 export default function ScrollToTop() {

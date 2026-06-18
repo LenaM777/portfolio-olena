@@ -1,8 +1,8 @@
 import { useState, useRef } from "react";
 import { HashLink } from "react-router-hash-link";
-import ProjectDropdown from "../ProjectDropdown/ProjectDropdown";
-import Icon from "../Icons/Icons";
-import { useClickOutside } from "../../hooks/useClickOutside";
+import ProjectDropdown from "@/components/ProjectDropdown/ProjectDropdown";
+import Icon from "@/components/Icons/Icons";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import "./NavLinks.scss";
 
 const NAV_LINKS = [

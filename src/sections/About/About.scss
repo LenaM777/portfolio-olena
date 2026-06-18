@@ -1,6 +1,4 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
-@use "../../styles/typography" as *;
+@use "@/styles/typography" as *;
 
 .about-section {
     padding-top: 40px;

@@ -1,5 +1,5 @@
-import { useTheme } from "../../context/ThemeContext";
-import Icon from "../Icons/Icons";
+import { useTheme } from "@/context/ThemeContext";
+import Icon from "@/components/Icons/Icons";
 
 const ThemeToggler = () => {
   const { theme, toggleTheme } = useTheme();

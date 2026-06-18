@@ -1,6 +1,4 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
-@use "../../styles/utils" as *;
+@use "@/styles/utils" as *;
 
 .project-modal {
   position: fixed;

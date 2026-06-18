@@ -1,6 +1,3 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
-
 .nav-menu {
   @include flex($direction: column, $gap: 10px);
 

@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
-import ProjectCard from "../ProjectCard/ProjectCard";
-import Icon from "../../components/Icons/Icons";
-import { useClickOutside } from "../../hooks/useClickOutside";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import Icon from "@/components/Icons/Icons";
+import { useClickOutside } from "@/hooks/useClickOutside";
 import "./ProjectModal.scss";
 
 const ProjectModal = ({ isOpen, project, onClose }) => {

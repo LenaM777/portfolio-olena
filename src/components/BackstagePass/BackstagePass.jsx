@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Icon from "../Icons/Icons";
+import Icon from "@/components/Icons/Icons";
 import "./BackstagePass.scss";
 
 const TRACKS = [

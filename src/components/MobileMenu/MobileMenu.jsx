@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import NavLinks from "../NavLinks/NavLinks";
-import ThemeToggler from "../ThemeToggler/ThemeToggler";
-import Icon from "../Icons/Icons";
+import NavLinks from "@/components/NavLinks/NavLinks";
+import ThemeToggler from "@/components/ThemeToggler/ThemeToggler";
+import Icon from "@/components/Icons/Icons";
 import "./MobileMenu.scss";
 
 export default function MobileMenu({ isOpen, onClose }) {

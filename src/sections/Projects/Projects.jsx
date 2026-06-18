@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import ProjectModal from "../../components/ProjectModal/ProjectModal";
+import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import ProjectModal from "@/components/ProjectModal/ProjectModal";
 import "./Projects.scss";
 
 const Projects = () => {

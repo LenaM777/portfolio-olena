@@ -1,4 +1,4 @@
-import sprite from "../../assets/icons/sprite.svg";
+import sprite from "@/assets/icons/sprite.svg";
 import "./Icons.scss";
 
 const Icon = ({ name, color, size = 24, className = "" }) => {

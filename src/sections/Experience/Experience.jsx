@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "../../components/Icons/Icons";
+import Icon from "@/components/Icons/Icons";
 import "./Experience.scss";
 
 const Experience = () => {

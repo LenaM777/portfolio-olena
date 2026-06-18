@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
-import NavLinks from "../../components/NavLinks/NavLinks";
-import MobileMenu from "../../components/MobileMenu/MobileMenu";
-import ThemeToggler from "../../components/ThemeToggler/ThemeToggler";
-import Icon from "../../components/Icons/Icons";
+import NavLinks from "@/components/NavLinks/NavLinks";
+import MobileMenu from "@/components/MobileMenu/MobileMenu";
+import ThemeToggler from "@/components/ThemeToggler/ThemeToggler";
+import Icon from "@/components/Icons/Icons";
 import "./Header.scss";
 
 export default function Header() {
