@@ -11,7 +11,7 @@ const Experience = () => {
           Frontend / Layout Developer (Part-time)
         </h3>
         <p className="experience-section__description">
-          Remote | 2023 – 2026 (2+ years of experience)
+          Remote | 2024 – 2026 (2+ years of experience)
         </p>
         <ul className="experience-section__bullets">
           <li className="experience-section__bullet">
@@ -51,8 +51,8 @@ const Experience = () => {
             <span>
               Optimized web performance and assets (image compression, SVG
               integration, font loading) focusing on
-              <strong>Core Web Vitals</strong> (LCP, CLS) through
-              <strong>Lighthouse</strong> diagnostics to ensure fast loading
+              <strong> Core Web Vitals</strong> (LCP, CLS) through
+              <strong> Lighthouse</strong> diagnostics to ensure fast loading
               speeds and visual stability.
             </span>
           </li>
