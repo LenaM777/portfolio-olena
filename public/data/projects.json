@@ -4,7 +4,7 @@
     "image": "./images/garry.jpg",
     "title": "Garry Potter",
     "description": "A multi-page encyclopedia of the Harry Potter universe that dynamically fetches character data from a remote REST API. It features filtering by house and role, and profiles with detailed information in a modal.",
-    "stack": ["HTML", "SCSS", "JS", "Bootstrap"],
+    "stack": ["SCSS", "JS", "Bootstrap", "API"],
     "demo": "https://harry-potter-olud.vercel.app/",
     "link": "https://github.com/LenaM777/harry-potter"
   },
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "image": "./images/todo-list.png",
-    "title": "To-Do List App",
+    "title": "To Do List App",
     "description": "A simple and intuitive to-do list app built with React. Manage your daily tasks, mark them as done, remove irrelevant ones or move them around in the list and stay organized!",
     "stack": ["React", "Vite"],
     "demo": "https://todo-app-zeta-flame-62.vercel.app/",
@@ -31,7 +31,7 @@
     "image": "./images/tomato.jpg",
     "title": "Tomato",
     "description": "A simple and convenient food delivery app (frontend only) that allows you to browse the menu, filter dishes by category, has a functional shopping cart for adding a certain amount of products and ordering food from this app.",
-    "stack": ["React", "Vite"],
+    "stack": ["React", "Vitest", "Unit Tests"],
     "demo": "https://tomato-delivery-sepia.vercel.app/",
     "link": "https://github.com/LenaM777/tomato-delivery"
   },
