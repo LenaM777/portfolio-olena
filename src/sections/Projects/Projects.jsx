@@ -1,19 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import ProjectModal from "@/components/ProjectModal/ProjectModal";
+import projectsData from "@/data/projects.json";
 import "./Projects.scss";
 
 const Projects = () => {
-  const [projects, setProjects] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  useEffect(() => {
-    fetch("/data/projects.json")
-      .then((response) => response.json())
-      .then((data) => setProjects(data))
-      .catch((error) => console.error("Error:", error));
-  }, []);
 
   const handleProjectClick = (project) => {
     setSelectedProject(project);
@@ -40,7 +33,7 @@ const Projects = () => {
             Projects
           </h2>
           <div className="projects-section__grid" role="list">
-            {projects.map((project) => (
+            {projectsData.map((project) => (
               <button
                 key={project.id}
                 className="project-section__card-button"
