@@ -79,8 +79,17 @@
   @media (min-width: $bp-tablet) {
     font-size: 16px;
   }
+}
 
-  @media (min-width: $bp-desktop) {
-    font-size: 16px;
+@mixin text-copy {
+  font-family: var(--font-mona);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.6;
+  font-variation-settings: "wdth" 100, "opsz" 16;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 14px;
   }
 }

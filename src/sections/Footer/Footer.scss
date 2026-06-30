@@ -1,35 +1,38 @@
-@use "@/styles/utils" as *;
-
+@use "@/styles/typography" as *;
 
 .footer {
   width: 100%;
-  padding: 40px 20px;
+  padding: 40px 20px 24px;
   background-color: var(--bg-color);
-  border-top: 1px solid var(--tool-bg);
+  border-top: 1px solid var(--color-glass-base);
 
   &__container {
     max-width: 1100px;
     margin: 0 auto;
-    @include flex($direction: column, $align: center, $justify: space-between, $gap: 20px);
+    @include flex($direction: column, $gap: 32px);
 
     @media (min-width: $bp-tablet) {
-      flex-direction: row;
-      gap: 0;
+      gap: 40px;
     }
   }
 
-  &__copy {
-    font-size: 14px;
-    color: var(--text-color);
-    opacity: 0.7;
+  &__info {
+    @include flex($direction: column, $gap: 24px);
   }
 
-  &__links {
-    @include flex($justify: center, $gap: 24px);
+  &__cta {
+    @include flex($direction: column, $gap: 16px);
+
+    @media (min-width: $bp-tablet) {
+      @include flex($direction: row, $gap: 12px);
+    }
+  }
+
+  &__social {
+    @include flex($gap: 16px);
   }
 
   &__link {
-    font-size: 14px;
     color: var(--text-color);
     text-decoration: none;
     opacity: 0.8;
@@ -46,5 +49,11 @@
         opacity: 1;
       }
     }
+  }
+
+  &__copy {
+    @include text-copy;
+    opacity: 0.7;
+    text-align: center;
   }
 }
