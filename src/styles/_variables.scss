@@ -1,5 +1,9 @@
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1200px;
+
 :root {
-  --font-mona: 'Mona Sans', sans-serif;
+  --font-mona: "Mona Sans", sans-serif;
   --font-inter: "Inter", sans-serif;
   --font-code: "Fira Code", monospace;
 
@@ -14,29 +18,29 @@
   --tool-color: #043b37;
   --tool-bg: #0fe1f031;
   --tool-shadow: none;
-  
 
   --btn-neon-gradient: linear-gradient(145deg, #bf6bcf, #a8aeeb);
   --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.575);
   --card-shadow-hover: 0 4px 22px rgba(0, 0, 0, 0.76);
   --glow-color: transparent;
-  //0 0px 22px #043b37;
   --glow-button-color: 2px 2px 10px #043b37b7;
   --btn-shadow-color: transparent;
-
   --btn-bg-color: linear-gradient(145deg, #0f0e0f, #3232db);
 
   --btn-text-color: #043b37;
   --btn-text-hover: #ffffff;
---accent-color: #ffa500;
   --transition: 0.3s ease;
+
+  --footer-height: 198px;
+  @media (max-width: #{$bp-tablet}) {
+    --footer-height: 260px;
+  }
 }
 
 [data-theme="dark"] {
   --bg-color: #090920;
 
-  --text-color: #F0F6FC;
-  //#e9edf1;
+  --text-color: #f0f6fc;
   --bg-player-color: #111f35;
 
   --bg: #0a0b0f;
@@ -56,7 +60,3 @@
   --btn-text-hover: #ffffff;
   //box-shadow: 0 10px 40px rgb(17 206 229 / 30%);
 }
-
-$bp-mobile: 480px;
-$bp-tablet: 768px;
-$bp-desktop: 1200px;

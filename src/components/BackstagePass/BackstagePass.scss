@@ -9,7 +9,7 @@
   background: var(--bg-color);
   box-shadow: 0 0 5px var(--tool-color);
   @include flex;
-  transition: bottom 0.5s ease;
+  transition: bottom 0.5s ease, box-shadow 0.3s ease;
 
   @media (min-width: $bp-tablet) {
     bottom: 40px;
@@ -19,7 +19,9 @@
   }
 
   &__docked {
-    bottom: 160px; 
+    position: fixed;
+    bottom: calc(var(--footer-height) + 20px);
+    transition: bottom 0.3s ease;
   }
 
   &__icon {
@@ -28,11 +30,19 @@
     color: var(--tool-color);
   }
 
-  &:hover {
-    box-shadow: 0 0 14px var(--btn-text-color);
-    color: var(--btn-text-color);
-    transition: color 0.3s, box-shadow 0.3s;
-    scale: 1.1;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      box-shadow: 0 0 14px var(--tool-color);
+    }
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--tool-color);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    box-shadow: 0 4px 14px var(--tool-color);
   }
 }
 
@@ -57,7 +67,7 @@
   }
 
   &__docked {
-    bottom: 160px; 
+    bottom: 160px;
   }
 
   &__next {
@@ -110,9 +120,21 @@
   &__btn {
     width: 44px;
     height: 44px;
-    
+    transition: transform 0.2s ease;
+
+    @media (hover: hover) and (pointer: fine) {
     &:hover {
       transform: scale(1.1);
     }
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--tool-color);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    transform: scale(0.95); 
+  }
   }
 }

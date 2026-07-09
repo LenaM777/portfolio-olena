@@ -1,9 +1,4 @@
 .icon {
   color: var(--text-color); 
   fill: currentColor;
-
-  &:hover {
-    color: var(--btn-text-color);
-    transition: color var(--transition); 
-  }
 }
