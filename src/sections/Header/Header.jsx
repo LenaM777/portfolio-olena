@@ -15,7 +15,7 @@ export default function Header() {
         <div className="header__container">
           <div className="header__logo">
             <HashLink smooth to="#top" aria-label="Logo - Home page">
-              <Icon name="github" />
+              <Icon name="github" className="header__logo--icon" />
               <span>LENA</span>
             </HashLink>
           </div>

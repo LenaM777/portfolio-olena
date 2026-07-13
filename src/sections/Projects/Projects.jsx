@@ -1,6 +1,5 @@
 import { useState, lazy, Suspense } from "react";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
-//import ProjectModal from "@/components/ProjectModal/ProjectModal";
 import projectsData from "@/data/projects.json";
 import "./Projects.scss";
 const ProjectModal = lazy(() =>
