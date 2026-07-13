@@ -20,6 +20,13 @@ const Projects = () => {
     setSelectedProject(null);
   };
 
+  const handleKeyDown = (project) => (e) => {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleProjectClick(project);
+    }
+  };
+
   return (
     <>
       <section
@@ -36,15 +43,17 @@ const Projects = () => {
           </h2>
           <div className="projects-section__grid">
             {projectsData.map((project) => (
-              <button
+              <div
                 key={project.id}
-                className="project-section__card-button"
+                className="project-section__card-wrapper"
                 onClick={() => handleProjectClick(project)}
+                onKeyDown={handleKeyDown(project)}
                 aria-label={`View details for ${project.title} project`}
-                type="button"
+                role="button"
+                tabIndex={0}
               >
                 <ProjectCard data={project} />
-              </button>
+              </div>
             ))}
           </div>
         </div>

@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 import Icon from "@/components/Icons/Icons";
 import { useClickOutside } from "@/hooks/useClickOutside";
+import { FocusTrap } from "focus-trap-react";
 import "./ProjectModal.scss";
 
 const ProjectModal = ({ isOpen, project, onClose }) => {
@@ -41,30 +42,32 @@ const ProjectModal = ({ isOpen, project, onClose }) => {
   if (!isOpen || !project) return null;
 
   return (
-    <div
-      className="project-modal"
-      role="dialog"
-      aria-modal="true"
-      aria-labelledby={`modal-title-${project.id}`}
-    >
-      <div className="project-modal__content" ref={modalRef} tabIndex={-1}>
-        <button
-          className="project-modal__btn-close"
-          onClick={onClose}
-          aria-label="Close modal"
-          type="button"
-        >
-          <Icon name="close" />
-        </button>
+    <FocusTrap focusTrapOptions={{ allowOutsideClick: true }}>
+      <div
+        className="project-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={`modal-title-${project.id}`}
+      >
+        <div className="project-modal__content" ref={modalRef} tabIndex={-1}>
+          <button
+            className="project-modal__btn-close"
+            onClick={onClose}
+            aria-label="Close modal"
+            type="button"
+          >
+            <Icon name="close" />
+          </button>
 
-        <div className="project-modal__card-wrapper">
-          <div id={`modal-title-${project.id}`} className="sr-only">
-            {project.title} project details
+          <div className="project-modal__card-wrapper">
+            <div id={`modal-title-${project.id}`} className="sr-only">
+              {project.title} project details
+            </div>
+            <ProjectCard data={project} />
           </div>
-          <ProjectCard data={project} />
         </div>
       </div>
-    </div>
+    </FocusTrap>
   );
 };
 

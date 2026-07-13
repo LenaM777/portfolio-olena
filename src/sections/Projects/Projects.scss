@@ -17,14 +17,16 @@
     align-items: stretch;
   }
 
-  &__card-button {
+  &__card-wrapper {
     all: unset;
+    display: block;
+    width: 100%;
     cursor: pointer;
-    display: contents;
 
     &:focus-visible {
       outline: 2px solid var(--btn-text-color);
       outline-offset: 4px;
+      border-radius: 8px;
     }
   }
 }
