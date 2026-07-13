@@ -15,7 +15,11 @@ const ProjectCard = ({ data, onCardClick, isInsideModal = false }) => {
       }
     >
       <div className="project-card__image">
-        <img src={image} alt={`Screenshot of ${title} project`} />
+        <img
+          src={image}
+          alt={`Screenshot of ${title} project`}
+          loading="lazy"
+        />
       </div>
 
       <div className="project-card__content">

@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
-import ProjectModal from "@/components/ProjectModal/ProjectModal";
+//import ProjectModal from "@/components/ProjectModal/ProjectModal";
 import projectsData from "@/data/projects.json";
 import "./Projects.scss";
+const ProjectModal = lazy(() =>
+  import("@/components/ProjectModal/ProjectModal")
+);
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -32,7 +35,7 @@ const Projects = () => {
           >
             Projects
           </h2>
-          <div className="projects-section__grid" role="list">
+          <div className="projects-section__grid">
             {projectsData.map((project) => (
               <button
                 key={project.id}
@@ -47,11 +50,15 @@ const Projects = () => {
           </div>
         </div>
       </section>
-      <ProjectModal
-        isOpen={isModalOpen}
-        project={selectedProject}
-        onClose={handleCloseModal}
-      />
+      <Suspense fallback={null}>
+        {isModalOpen && (
+          <ProjectModal
+            isOpen={isModalOpen}
+            project={selectedProject}
+            onClose={handleCloseModal}
+          />
+        )}
+      </Suspense>
     </>
   );
 };
