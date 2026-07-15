@@ -70,17 +70,27 @@ Optimized to achieve near-perfect scores across all metrics:
 - **Best Practices:** 100%
 - **SEO:** 100%
 
+**[Check live results on PageSpeed ​​Insights](https://pagespeed.web.dev/analysis/https-portfolio-olena-murex-vercel-app/2iqbxcxc92?form_factor=mobile)**
+
 <table>
   <tr>
-   <td align="center"><b>Mobile Audit</b></td>
-    <td align="center"><b>Desktop Audit</b></td>
+    <td align="center" width="400"><b>Mobile Audit</b></td>
+    <td align="center" width="400"><b>Desktop Audit</b></td>
   </tr>
   <tr>
-    <td valign="top" align="center">
-      <details><summary>🔍 View Reports Mobile</summary><br><img src="public/screenshots/lighthouse-report-mobile.png" alt="Lighthouse Mobile" width="400"></details>
+    <td valign="top" align="center" width="400">
+      <details>
+        <summary> View Reports Mobile</summary>
+        <br>
+        <img src="public/screenshots/lighthouse-report-mobile.png" alt="Lighthouse Mobile" width="100%">
+      </details>
     </td>
-    <td valign="top" align="center">
-      <details><summary>🔍 View Reports Desktop </summary><br><img src="public/screenshots/lighthouse-report-desktop.png" alt="Lighthouse Desktop" width="400"></details>
+    <td valign="top" align="center" width="400">
+      <details>
+        <summary> View Reports Desktop </summary>
+        <br>
+        <img src="public/screenshots/lighthouse-report-desktop.png" alt="Lighthouse Desktop" width="100%">
+      </details>
     </td>
   </tr>
 </table>
