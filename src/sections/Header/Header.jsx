@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { HashLink } from "react-router-hash-link";
 import NavLinks from "@/components/NavLinks/NavLinks";
 import MobileMenu from "@/components/MobileMenu/MobileMenu";
 import ThemeToggler from "@/components/ThemeToggler/ThemeToggler";
+import Logo from "@/components/Logo/Logo";
 import Icon from "@/components/Icons/Icons";
 import "./Header.scss";
 
@@ -13,13 +13,7 @@ export default function Header() {
     <header className="header" id="top">
       <div className="container">
         <div className="header__container">
-          <div className="header__logo">
-            <HashLink smooth to="#top" aria-label="Logo - Home page">
-              <Icon name="github" className="header__logo--icon" />
-              <span>LENA</span>
-            </HashLink>
-          </div>
-
+          <Logo />
           <nav className="header__nav" aria-label="Main navigation">
             <NavLinks className="nav-link" />
           </nav>

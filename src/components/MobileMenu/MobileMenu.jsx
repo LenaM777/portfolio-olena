@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import NavLinks from "@/components/NavLinks/NavLinks";
-import ThemeToggler from "@/components/ThemeToggler/ThemeToggler";
+import Logo from "@/components/Logo/Logo";
 import Icon from "@/components/Icons/Icons";
 import "./MobileMenu.scss";
 
@@ -31,7 +31,7 @@ export default function MobileMenu({ isOpen, onClose }) {
         aria-hidden="true"
       ></div>
       <div className="mobile-menu__content">
-        <ThemeToggler />
+        <Logo />
         <button
           type="button"
           className="mobile-menu__close"
