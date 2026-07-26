@@ -1,6 +1,24 @@
 [
   {
     "id": 1,
+    "image": "./images/ecom-page.jpg",
+    "title": "E-commerce Page",
+    "description": "This is a premium, fully accessible and highly responsive solution to the E-commerce product page with lightbox gallery, add items to the cart, view the cart and remove items from it.",
+    "stack": ["Vue", "Pinia", "Vite", "Tailwind"],
+    "demo": "https://ecommerce-product-page-five-zeta.vercel.app/",
+    "link": "https://github.com/LenaM777/ecommerce-product-page"
+  },
+  {
+    "id": 2,
+    "image": "./images/space-tourism.jpg",
+    "title": "Space Tourism",
+    "description": "A multi-page space tourism website featuring interactive tabbed navigation built with a strict focus on web accessibility (a11y) and keyboard navigation. Includes a fully responsive layout and dynamic data loading from a local JSON file.",
+    "stack": ["React", "Vite", "Framer Motion"],
+    "demo": "https://space-tourism-ten-kappa.vercel.app",
+    "link": "https://github.com/LenaM777/space-tourism"
+  },
+  {
+    "id": 3,
     "image": "./images/garry.jpg",
     "title": "Garry Potter",
     "description": "A multi-page encyclopedia of the Harry Potter universe that dynamically fetches character data from a remote REST API. It features filtering by house and role, and profiles with detailed information in a modal.",
@@ -9,25 +27,16 @@
     "link": "https://github.com/LenaM777/harry-potter"
   },
   {
-    "id": 2,
-    "image": "./images/weather.png",  
-    "title": "Weather App",
-    "description": "A simple weather app that allows users to search for current weather conditions in a city. It pulls data from the OpenWeatherMap API and supports light and dark themes.",
-    "stack": ["React", "Vite", "API"],
-    "demo": "https://weather-app-react-2iu1.vercel.app/",
-    "link": "https://github.com/LenaM777/weather-app-react"
-  },
-  {
-    "id": 3,
+    "id": 4,
     "image": "./images/todo-list.png",
     "title": "To Do List App",
     "description": "A simple and intuitive to-do list app built with React. Manage your daily tasks, mark them as done, remove irrelevant ones or move them around in the list and stay organized!",
     "stack": ["React", "Vite"],
     "demo": "https://todo-app-zeta-flame-62.vercel.app/",
     "link": "https://github.com/LenaM777/todo-app"
-  },
+  },  
   {
-    "id": 4,
+    "id": 5,
     "image": "./images/tomato.jpg",
     "title": "Tomato",
     "description": "A simple and convenient food delivery app (frontend only) that allows you to browse the menu, filter dishes by category, has a functional shopping cart for adding a certain amount of products and ordering food from this app.",
@@ -36,21 +45,21 @@
     "link": "https://github.com/LenaM777/tomato-delivery"
   },
   {
-    "id": 5,
+    "id": 6,
+    "image": "./images/weather.png",  
+    "title": "Weather App",
+    "description": "A simple weather app that allows users to search for current weather conditions in a city. It pulls data from the OpenWeatherMap API and supports light and dark themes.",
+    "stack": ["React", "Vite", "API"],
+    "demo": "https://weather-app-react-2iu1.vercel.app/",
+    "link": "https://github.com/LenaM777/weather-app-react"
+  },
+  {
+    "id": 7,
     "image": "./images/loopstudios.jpg",
     "title": "Loopstudios",
     "description": "A modern VR studio single-page website featuring a flexible responsive layout. Built using Grid layout. It includes fluid, dynamic animations on interactive cards.",
     "stack": ["HTML", "SCSS", "JS"],
     "demo": "https://loopstudios-six-jade.vercel.app/",
     "link": "https://github.com/LenaM777/loopstudios"
-  },
-  {
-    "id": 6,
-    "image": "./images/space-tourism.jpg",
-    "title": "Space Tourism",
-    "description": "A multi-page space tourism website featuring interactive tabbed navigation built with a strict focus on web accessibility (a11y) and keyboard navigation. Includes a fully responsive layout and dynamic data loading from a local JSON file.",
-    "stack": ["React", "Vite", "Framer Motion"],
-    "demo": "https://space-tourism-ten-kappa.vercel.app",
-    "link": "https://github.com/LenaM777/space-tourism"
   }
 ]

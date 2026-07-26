@@ -12,16 +12,16 @@ const Skills = () => {
               <strong>Programming:</strong> JavaScript (ES6+).
             </li>
             <li className="skills-section__item">
-              <strong>Frameworks & Libraries:</strong> React, Bootstrap, Basic
-              Unit Testing (Vitest).
+              <strong>Frameworks & Libraries:</strong> React, Vue 3 (Composition
+              API), Pinia, Bootstrap, Basic Unit Testing (Vitest).
             </li>
             <li className="skills-section__item">
-              <strong>Core Tech Stack:</strong> HTML5, SCSS (Flexbox, Grid),
-              Cross-Browser, Responsive Design.
+              <strong>Core Tech Stack:</strong> HTML5, SCSS, Tailwind CSS v4
+              (Flexbox, Grid), Cross-Browser, Responsive Design.
             </li>
             <li className="skills-section__item">
               <strong>Development Tools:</strong> Git/GitHub, Vite, Project
-              Configuration (Vite), I-Assisted Development (Claude, Gemini,
+              Configuration (Vite), AI-Assisted Development (Claude, Gemini,
               ChatGPT), REST API Integration, UI/UX (Figma), Web Accessibility
               (a11y).
             </li>
